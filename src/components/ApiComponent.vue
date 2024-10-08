@@ -4,7 +4,7 @@ import {useFetch} from '../composables/fetch.ts'
 
 const url = ref('https://jsonplaceholder.typicode.com/albums');
 
-const { data, error } = useFetch(() => url.value);
+const { data, error } = useFetch(url);
 
 const loadComments = function () {
     url.value = 'https://jsonplaceholder.typicode.com/comments';
